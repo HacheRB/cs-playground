@@ -1,19 +1,57 @@
 /*Binary Search finds the position of a target value within a sorted array.
-Time Complexity O( log n)
+
+It's recommended to implement a iterative solution, as a recursive one
+could use more space depending on the language used.
+
+Iterative Implementation:
+Time Complexity O(log n)
+Space Complexity O(1)
+
+Recursive Implementation:
+Time Complexity O(log n)
+Space Complexity O(log n)
 */
 
-//Recursive Implementation, returns true if value is in array.
-function recursiveBinarySearch(arr, start, end, target) {
-  if (start > end) return false
-  let midIndex = Math.floor((start + end) / 2)
-  if (arr[midIndex] === target) return true
-  if (arr[midIndex] > target)
-    return binarySearch(arr, start, midIndex - 1, target)
-  else return binarySearch(arr, midIndex + 1, end, target)
+//Iterative Implementation
+function iterativeBinarySearch(array, target) {
+  return iterativeBinarySearchHelper(array, target, 0, array.length - 1)
 }
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15]
-let start = 0
-let end = arr.length - 1
-let target = 10
-console.log(recursiveBinarySearch(arr2, start, end, target))
+function iterativeBinarySearchHelper(array, target, left, right) {
+  while (left <= right) {
+    const middle = Math.floor((left + right) / 2)
+    const potentialMatch = array[middle]
+    if (target === potentialMatch) {
+      return middle
+    } else if (target < potentialMatch) {
+      right = middle - 1
+    } else {
+      left = middle + 1
+    }
+  }
+  return -1
+}
+
+//Recursive Implementation, returns true if value is in array.
+function recursiveBinarySearch(array, target) {
+  return recursivebinarySearchHelper(array, target, 0, array.length - 1)
+}
+
+function recursivebinarySearchHelper(array, target, left, right) {
+  if (left > right) return false
+  let middle = Math.floor((left + right) / 2)
+  const potentialMatch = array[middle]
+  if (potentialMatch === target) return true
+  if (potentialMatch > target)
+    return recursivebinarySearchHelper(array, target, left, middle - 1)
+  else return recursivebinarySearchHelper(array, target, middle + 1, right)
+}
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+const left = 0
+const right = arr.length - 1
+const target = 10
+
+console.log(iterativeBinarySearch(arr, target))
+console.log('-------------------------')
+console.log(recursiveBinarySearch(arr, target, left, right))

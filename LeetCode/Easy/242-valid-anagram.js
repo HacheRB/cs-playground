@@ -19,25 +19,24 @@ var solution1 = function (s, t) {
   return true
 }
 
+function buildHashMap(string) {
+  const hashMap = {}
+  for (let char of string) {
+    hashMap[char] = hashMap[char] + 1 || 1
+  }
+  console.log('hashmap', hashMap)
+  return hashMap
+}
+
 //Solution #2
 // Time Complexity
 // Space Complexity
 var solution2 = function (s, t) {
-  if()
   return s.split('').sort().join('') === t.split('').sort().join('')
 }
 
 let s = 'rat'
 let t = 'car'
-
-function buildHashMap(string) {
-  const hashMap = {}
-  for (let char of string) {
-    hashMap[char] = hashMap[char] +1 || 1
-  }
-  console.log('hashmap', hashMap)
-  return hashMap
-}
 
 console.log('Solution #1')
 const t0 = performance.now()
