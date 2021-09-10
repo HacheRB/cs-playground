@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/merge-sorted-array/
 
-// Solution #1 -
+// Solution #1 
 // Time Complexity - 
 // Space Complexity -
 
