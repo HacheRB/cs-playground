@@ -17,15 +17,15 @@ var solution1 = function (nums, k) {
 
 // Solution #2
 // 1. Reverse full Array.
-// 2. Then reverse the first part until, from position 0 to K-1. 
-// 3. Finally reverse the last part, from position K to arr.lenghth -1 
+// 2. Then reverse the first part until, from position 0 to K-1.
+// 3. Finally reverse the last part, from position K to arr.lenghth -1
 // Time Complexity O(n)
 // Space Complexity O(1)
 var solution2 = function (nums, k) {
   k = k % nums.length
-  reverse(nums, 0, nums.length-1)
-  reverse(nums, 0, k-1)
-  reverse(nums, k, nums.length-1)
+  reverse(nums, 0, nums.length - 1)
+  reverse(nums, 0, k - 1)
+  reverse(nums, k, nums.length - 1)
 }
 
 var reverse = function (nums, start, end) {
