@@ -3,6 +3,7 @@
 // Solution #1
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (paragraph, banned) {
   let sanitizedParagraph = paragraph.replaceAll(/[!?',;.]/g, ' ')
   let wordArray = sanitizedParagraph
@@ -10,20 +11,20 @@ var solution1 = function (paragraph, banned) {
     .toLowerCase()
     .trim()
     .split(' ')
-  let hashTable = {}
+  let hashMap = {}
   let mostCommonWord = ''
   let max = 0
   for (let word of banned) {
-    hashTable[word] = -1
+    hashMap[word] = -1
   }
   for (let word of wordArray) {
-    if (!hashTable[word]) {
-      hashTable[word] = 1
-    } else if (hashTable[word] !== -1) {
-      hashTable[word]++
+    if (!hashMap[word]) {
+      hashMap[word] = 1
+    } else if (hashMap[word] !== -1) {
+      hashMap[word]++
     }
-    if (max < hashTable[word]) {
-      max = hashTable[word]
+    if (max < hashMap[word]) {
+      max = hashMap[word]
       mostCommonWord = word
     }
   }

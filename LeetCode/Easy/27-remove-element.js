@@ -14,7 +14,7 @@ var solution1 = function (nums, val) {
   return nums.length
 }
 
-// Solution #2 - In place
+// Solution #2 - In Place Two Pointers
 // Time Complexity O(n)
 // Space Complexity O(1)
 

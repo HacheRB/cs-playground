@@ -3,13 +3,14 @@
 // Solution #1
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (nums) {
-  const hashTable = {}
+  const hashMap = {}
   for (let num of nums) {
-    hashTable[num] = hashTable[num] + 1 || 1
+    hashMap[num] = hashMap[num] + 1 || 1
   }
   for (let num of nums) {
-    if (hashTable[num] === 1) return num
+    if (hashMap[num] === 1) return num
   }
 }
 

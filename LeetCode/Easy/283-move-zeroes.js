@@ -3,6 +3,7 @@
 // Solution #1
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (nums) {
   let lastNonZero = 0
   for (let i = 0; i < nums.length; i++) {
@@ -15,7 +16,6 @@ var solution1 = function (nums) {
     nums[i] = 0
   }
 }
-
 
 let nums = [0, 1, 0, 3, 12]
 

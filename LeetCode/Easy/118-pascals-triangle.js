@@ -3,11 +3,10 @@
 // Solution #1
 // Time Complexity O(numRows^2)
 // Space Complexity O(numRows^2)
+
 var solution1 = function (numRows) {
   let triangle = []
-
   if (numRows === 0) return triangle
-  // Push first row
   triangle.push([1])
   // Outer for loop that iterates through the rows. Starts on the 2nd row.
   for (let i = 1; i < numRows; i++) {

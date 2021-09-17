@@ -3,12 +3,13 @@
 // Solution #1
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (word) {
   let case1 = true
   let case2 = true
   let case3 = true
 
-  //Check case 1
+  //Check Case 1
   for (let i = 0; i < word.length; i++) {
     if (!(word[i] === word[i].toUpperCase())) {
       case1 = false
@@ -17,7 +18,7 @@ var solution1 = function (word) {
   }
   if (case1) return 'case 1 true'
 
-  // Check case 2
+  // Check Case 2
   for (let i = 0; i < word.length; i++) {
     if (word[i] === word[i].toUpperCase()) {
       case2 = false
@@ -26,7 +27,7 @@ var solution1 = function (word) {
   }
   if (case2) return 'case 2 true'
 
-  // Check case 3
+  // Check Case 3
   if (!(word[0] === word[0].toUpperCase())) case3 = false
   if (case3) {
     for (let i = 1; i < word.length; i++) {
@@ -43,6 +44,7 @@ var solution1 = function (word) {
 // Solution #2
 // Time Complexity O()
 // Space Complexity O()
+
 var solution2 = function (word) {
   if (word.length === 1) {
     return true
@@ -64,10 +66,10 @@ var solution2 = function (word) {
 }
 
 // Some LeetCode user solutions
-
 // Solution #3
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution3 = function (word) {
   if (word.toUpperCase() === word) {
     return true
@@ -90,6 +92,7 @@ var solution3 = function (word) {
 // Solution #4
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution4 = function (word) {
   return (
     word === word.toUpperCase() ||

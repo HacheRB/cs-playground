@@ -3,13 +3,15 @@
 // Solution #1 - .reverse()
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution = function (s) {
   s = s.reverse()
 }
 
-//Solution #2 - for loop
+//Solution #2 - For Loop
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution2 = function (s) {
   let reversed = []
   for (let char of s) {
@@ -18,16 +20,18 @@ var solution2 = function (s) {
   return reversed
 }
 
-//Solution #3 - reduce, not in place
+//Solution #3 - Reduce, not in place
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution3 = function (s) {
   return s.reduce((rev, char) => char + rev, '').split('')
 }
 
-//Solution #4 - 2 pointers
+//Solution #4 - Two Pointers
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution4 = function (s) {
   let left = 0
   let right = s.length - 1

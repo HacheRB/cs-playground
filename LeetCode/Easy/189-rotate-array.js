@@ -3,6 +3,7 @@
 // Solution #1 - Using auxiliary array to rotate original.
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (nums, k) {
   let arr = []
   console.log('nums length', nums.length)
@@ -21,6 +22,7 @@ var solution1 = function (nums, k) {
 // 3. Finally reverse the last part, from position K to arr.lenghth -1
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution2 = function (nums, k) {
   k = k % nums.length
   reverse(nums, 0, nums.length - 1)

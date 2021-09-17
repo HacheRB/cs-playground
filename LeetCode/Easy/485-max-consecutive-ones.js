@@ -1,8 +1,9 @@
 // https://leetcode.com/problems/max-consecutive-ones/
 
-// Solution #1 - for loop
+// Solution #1 - For Loop
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (nums) {
   let count = 0
   let maxCount = 0

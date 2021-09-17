@@ -3,6 +3,7 @@
 // Solution #1
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (n) {
   let answer = []
   for (let i = 1; i <= n; i++) {

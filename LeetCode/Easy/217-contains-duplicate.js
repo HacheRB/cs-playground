@@ -1,22 +1,24 @@
 // https://leetcode.com/problems/contains-duplicate/
 
-// Solution #1 - for loop
+// Solution #1 - For Loop
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (nums) {
   let set = new Set(nums)
   if (set.size < nums.length) return true
   return false
 }
 
-//Solution #2 - hash table
+//Solution #2 - Hash Map
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution2 = function (nums) {
-  const hashTable = {}
+  const hashMap = {}
   for (let num of nums) {
-    if (!hashTable[num]) {
-      hashTable[num] = 1
+    if (!hashMap[num]) {
+      hashMap[num] = 1
     } else {
       return true
     }

@@ -17,21 +17,6 @@ function linearSearch(array, target) {
   return false
 }
 
-//Recursive Implementation, returns true if value is in array.
-function recursiveBinarySearch(array, target) {
-  return recursivebinarySearchHelper(array, target, 0, array.length - 1)
-}
-
-function recursivebinarySearchHelper(array, target, left, right) {
-  if (left > right) return false
-  let middle = Math.floor((left + right) / 2)
-  const potentialMatch = array[middle]
-  if (potentialMatch === target) return true
-  if (potentialMatch > target)
-    return recursivebinarySearchHelper(array, target, left, middle - 1)
-  else return recursivebinarySearchHelper(array, target, middle + 1, right)
-}
-
 const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 const arr2 = undefined
 const arr3 = null

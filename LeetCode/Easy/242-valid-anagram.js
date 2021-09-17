@@ -1,8 +1,9 @@
 // https://leetcode.com/problems/valid-anagram/
 
 // Solution #1
-// Time Complexity
-// Space Complexity
+// Time Complexity O()
+// Space Complexity O()
+
 var solution1 = function (s, t) {
   let sHashMap = buildHashMap(s)
   let tHashMap = buildHashMap(t)
@@ -29,8 +30,9 @@ function buildHashMap(string) {
 }
 
 //Solution #2
-// Time Complexity
-// Space Complexity
+// Time Complexity O()
+// Space Complexity O()
+
 var solution2 = function (s, t) {
   return s.split('').sort().join('') === t.split('').sort().join('')
 }

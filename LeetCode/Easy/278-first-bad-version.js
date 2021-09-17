@@ -1,8 +1,9 @@
 // https://leetcode.com/problems/first-bad-version/
 
-// Solution #1 - for loop
+// Solution #1 - For Loop
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (isBadVersion) {
   return function (n) {
     for (let i = 0; i < n; i++) {
@@ -17,8 +18,9 @@ var solution1 = function (isBadVersion) {
 // Solution #2 - Binary Search
 // Time Complexity O(log n)
 // Space Complexity O(1)
+
 var solution2 = function (isBadVersion) {
-  /**
+  /*
    * @param {integer} n Total versions
    * @return {integer} The first bad version
    */
