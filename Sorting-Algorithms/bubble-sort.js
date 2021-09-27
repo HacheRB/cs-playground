@@ -1,9 +1,10 @@
 /* Bubble Sort
+https://en.wikipedia.org/wiki/Bubble_sort
+
 Loops through the array, compares one position with the next, if the first one is bigger it swaps places, then repeats the process until there's no change in ordering (you need to keep track of changes).
 The biggest number will bubble up to the last position of the array so we can optimize each iteration by checking until array.length -i 
 
-Matches the human mental model olf sorting, it's a educational algorithm as other n^2 sorting aLgorithms like insertion sort run faster, so bubble sort is not practical. More efficient algorithms are quicksort, timsort or mergesort.
-*/
+Matches the human mental model olf sorting, it's a educational algorithm as other n^2 sorting aLgorithms like insertion sort run faster, so bubble sort is not practical. More efficient algorithms are quicksort, timsort or mergesort. */
 
 // Solution #1 - While Loop
 // Time Complexity O(n^2)
