@@ -16,6 +16,7 @@ var solution1 = function (nums, k) {
 //Solution #2 - sort
 // Time Complexity O(n log n) Because of JS Sort Implementation
 // Space Complexity O(1)
+
 var solution2 = function (nums, k) {
   nums.sort((a, b) => a - b)
   return nums[nums.length - k]

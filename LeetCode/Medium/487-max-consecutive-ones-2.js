@@ -3,6 +3,7 @@
 // Solution #1 - Brute Force - Double For Loop
 // Time Complexity O(n^2)
 // Space Complexity O(1)
+
 var solution1 = function (nums) {
   let maxConsecutive = 0
   for (let i = 0; i < nums.length; i++) {
