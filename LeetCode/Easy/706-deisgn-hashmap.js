@@ -3,6 +3,7 @@
 // Solution #1
 // Time Complexity O()
 // Space Complexity O()
+
 var solution1 = function () {
   this.data = new Array(1000001)
 }

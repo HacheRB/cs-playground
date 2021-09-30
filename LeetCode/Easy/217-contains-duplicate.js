@@ -10,7 +10,7 @@ var solution1 = function (nums) {
   return false
 }
 
-//Solution #2 - Hash Map
+// Solution #2 - Hash Map
 // Time Complexity O(n)
 // Space Complexity O(n)
 

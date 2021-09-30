@@ -29,7 +29,7 @@ function buildHashMap(string) {
   return hashMap
 }
 
-//Solution #2
+// Solution #2
 // Time Complexity O()
 // Space Complexity O()
 

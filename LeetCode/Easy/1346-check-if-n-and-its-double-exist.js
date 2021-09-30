@@ -3,6 +3,7 @@
 // Solution #1 - Hash Map
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (arr) {
   const hashMap = {}
 
@@ -21,6 +22,7 @@ var solution1 = function (arr) {
 //Solution #2 - Set
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution2 = function (arr) {
   let set = new Set()
 

@@ -3,6 +3,7 @@
 // Solution #1 - Set
 // Time Complexity O(n)
 // Space Complexity O(n)
+
 var solution1 = function (nums, k = 3) {
   let set = new Set(nums)
 
@@ -19,6 +20,7 @@ var solution1 = function (nums, k = 3) {
 //Solution #2 - 3 Maximums using a Set
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution2 = function (nums) {
   let maxSet = new Set()
 

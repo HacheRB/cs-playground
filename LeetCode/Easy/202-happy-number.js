@@ -31,7 +31,7 @@ var sumSquares = function (n) {
   return sum
 }
 
-//Solution #2 - Leetcode Solution - Floyd's Cycle-Finding Algorithm
+// Solution #2 - Leetcode Solution - Floyd's Cycle-Finding Algorithm
 // Time Complexity O(log n) - Time Limit Exceeded
 // Space Complexity O(1)
 

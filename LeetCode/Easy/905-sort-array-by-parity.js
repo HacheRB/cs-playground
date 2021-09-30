@@ -3,6 +3,7 @@
 // Solution #1 - In Place
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (nums) {
   let insertIndex = 0 // Slow runner
   if (nums.length === 0) return 0
@@ -21,6 +22,7 @@ var solution1 = function (nums) {
 //Solution #2 - LeetCode Solution - Quicksort
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution2 = function (nums) {
   let i = 0
   let j = nums.length - 1

@@ -5,12 +5,12 @@
 // Space Complexity O()
 var solution1 = function () {}
 
-//Solution #2
+// Solution #2
 // Time Complexity O()
 // Space Complexity O()
 var solution2 = function () {}
 
-//Solution #3
+// Solution #3
 // Time Complexity O()
 // Space Complexity O()
 var solution3 = function () {}

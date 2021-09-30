@@ -3,6 +3,7 @@
 // Solution #1 - Compare with a sorted copy.
 // Time Complexity O(2n) = O(n)
 // Space Complexity O(n)
+
 var solution1 = function (heights) {
   let numberOfIndices = 0
   let sortedHeights = [...heights]

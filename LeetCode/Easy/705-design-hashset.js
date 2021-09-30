@@ -3,6 +3,7 @@
 // Solution #1
 // Time Complexity O()
 // Space Complexity O()
+
 var myHashSet = function () {
   this.data = []
   this.size = 1000

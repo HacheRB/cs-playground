@@ -3,6 +3,7 @@
 // Solution #1 - In Place
 // Time Complexity O(n)
 // Space Complexity O(1)
+
 var solution1 = function (arr) {
   if (arr.length < 2) return [-1]
 
