@@ -5,7 +5,7 @@
 // Space Complexity O(n)
 
 var solution1 = function (s) {
-  let numberOfChars = {}
+  let numberOfChars = new Map()
 
   for (let char of s) {
     numberOfChars[char] = (numberOfChars[char] || 0) + 1
