@@ -67,3 +67,46 @@ console.log(memoizedFibonacci(n))
 const t5 = performance.now()
 console.log(`Took ${t5 - t4} milliseconds.`)
 console.log('--------------------------------------')
+
+// Nested Addition - Recursion
+// Time Complexity O(nk) probably, K would be the depth of the nested arrays/size of subarrays
+// Space Complexity O(n) probably
+
+var nestedAddition = function (nums) {
+  let sum = 0
+  for (let i = 0; i < nums.length; i++) {
+    if (typeof nums[i] === 'number') {
+      sum += nums[i]
+    } else {
+      sum += nestedAddition(nums[i])
+    }
+  }
+  return sum
+}
+
+let nums = [1, 2, 3, 4, 5, [6, 7, 8], 9, [[10, 11], 13, [14]]]
+
+console.log('Nested Addition')
+const t6 = performance.now()
+console.log(nestedAddition(nums))
+const t7 = performance.now()
+console.log(`Took ${t7 - t6} milliseconds.`)
+console.log('--------------------------------------')
+
+// Factorial - Recursion
+// Time Complexity O()
+// Space Complexity O(n) probably
+
+var factorial = function (m) {
+  if (m <= 1) return 1
+  return m * factorial(m - 1)
+}
+
+let m = 8
+
+console.log('Factorial')
+const t8 = performance.now()
+console.log(factorial(m))
+const t9 = performance.now()
+console.log(`Took ${t9 - t8} milliseconds.`)
+console.log('--------------------------------------')
