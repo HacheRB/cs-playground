@@ -28,7 +28,7 @@ var naiveMaxSubArraySum = function (nums, n) {
   return max
 }
 
-// Solution #2 - Sliding Window
+// Solution #2 - Sliding Window - For Loop
 // Time Complexity O(n)
 // Space Complexity O(1)
 
@@ -47,23 +47,54 @@ var maxSubArraySum = function (nums, n) {
   return max
 }
 
+// Solution #3 - Sliding Window - While Loop - Leetcode Problem 3
+// Time Complexity O(n)
+// Space Complexity O(1)
+
+var maxSubArraySum2 = function (s) {
+  let subString = new Set()
+  let left = 0
+  let right = 0
+  let longest = 0
+
+  while (right < s.length) {
+    if (!subString.has(s[right])) {
+      subString.add(s[right])
+      longest = Math.max(longest, subString.size)
+      right++
+    } else {
+      subString.delete(s[left])
+      left++
+    }
+  }
+  return longest
+}
+
 let nums = [1, 2, 5, 2, 8, 1, 5]
 let n = 2
 // let nums = [4, 2, 1, 6, 2]
 // let n = 4
 // let nums = []
 // let n = 4
+let s = 'abcabcbb'
 
 console.log('Solution #1')
-const t2 = performance.now()
+const t0 = performance.now()
 console.log(naiveMaxSubArraySum(nums, n))
+const t1 = performance.now()
+console.log(`Took ${t1 - t0} milliseconds.`)
+console.log('--------------------------------------')
+
+console.log('Solution #2')
+const t2 = performance.now()
+console.log(maxSubArraySum(nums, n))
 const t3 = performance.now()
 console.log(`Took ${t3 - t2} milliseconds.`)
 console.log('--------------------------------------')
 
-console.log('Solution #2')
+console.log('Solution #3')
 const t4 = performance.now()
-console.log(maxSubArraySum(nums, n))
+console.log(maxSubArraySum2(s))
 const t5 = performance.now()
 console.log(`Took ${t5 - t4} milliseconds.`)
 console.log('--------------------------------------')

@@ -37,10 +37,6 @@ var solution2 = function (jewels, stones) {
   return count
 }
 
-// Solution #3
-// Time Complexity O()
-// Space Complexity O()
-
 let jewels = 'aA'
 let stones = 'aAAbbbb'
 // let jewels = "z"
