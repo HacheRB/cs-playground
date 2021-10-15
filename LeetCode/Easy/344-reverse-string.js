@@ -43,6 +43,24 @@ var solution4 = function (s) {
   return s
 }
 
+//Solution #5 - Recursive
+// Time Complexity O(n)
+// Space Complexity O(1)
+
+var solution5 = function (s) {
+  recursiveHelper(0, s.length - 1, s)
+}
+
+var recursiveHelper = function (left, right, s) {
+  if (left >= right) return s
+
+  let temp = s[right]
+  s[right] = s[left]
+  s[left] = temp
+
+  recursiveHelper(left + 1, right - 1, s)
+}
+
 let s = ['h', 'e', 'l', 'l', 'o']
 
 console.log('Solution #1')
@@ -70,9 +88,20 @@ const t5 = performance.now()
 console.log(`Took ${t5 - t4} milliseconds.`)
 console.log('--------------------------------------')
 
+s = ['h', 'e', 'l', 'l', 'o']
+
 console.log('Solution #4')
 const t6 = performance.now()
 console.log(solution4(s))
 const t7 = performance.now()
 console.log(`Took ${t7 - t6} milliseconds.`)
+console.log('--------------------------------------')
+
+s = ['h', 'e', 'l', 'l', 'o']
+
+console.log('Solution #5')
+const t8 = performance.now()
+console.log(solution5(s))
+const t9 = performance.now()
+console.log(`Took ${t9 - t8} milliseconds.`)
 console.log('--------------------------------------')
