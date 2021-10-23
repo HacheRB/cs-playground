@@ -2,7 +2,11 @@
 Finds the position of a target value within a sorted array.
 
 It's recommended to implement a iterative solution, as a recursive one
-could use more space depending on the language used. */
+could use more space depending on the language used. 
+
+https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
+int mid = low + ((high - low) / 2);
+*/
 
 // Solution #1 - Iterative Binary Search
 // Time Complexity O(log n)
