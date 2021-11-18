@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/maximum-subarray/
 
 // Solution #1 - Kadane's Algorithm
+// https://en.wikipedia.org/wiki/Maximum_subarray_problem
 // Time Complexity O(n)
 // Space Complexity O(1)
 
