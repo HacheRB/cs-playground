@@ -1,13 +1,15 @@
-/* Write a function that accepts a positive number N.
-The function should console log a step shape with N 
-levels using the # character. Make sure the step has
-spaces on the right hand side!
+/* 
+Write a function that accepts a positive number N.
+The function should console log a pyramid shape
+with N levels using the # character.
+Make sure the pyramid has spaces on both the left 
+and right hand.
 
 steps(4)
-'#   '
-'##  '
-'### '
-'####'
+'   #   '
+'  ###  '
+' ##### '
+'#######'
 */
 
 // Solution #1 - Nested for loops
@@ -32,8 +34,8 @@ var steps = function (n) {
 }
 
 // Solution #2 - Recursion
-// Time Complexity O()
-// Space Complexity O()
+// Time Complexity O(n)
+// Space Complexity O(n)
 
 var recursiveSteps = function (n, row = 0, steps = '') {
 	const mid = Math.floor((2 * n - 1) / 2)

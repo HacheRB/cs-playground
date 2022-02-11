@@ -1,4 +1,5 @@
-/* Write a function that accepts a positive number N.
+/* 
+Write a function that accepts a positive number N.
 The function should console log a step shape with N 
 levels using the # character. Make sure the step has
 spaces on the right hand side!
@@ -30,8 +31,8 @@ var steps = function (n) {
 }
 
 // Solution #2 - Recursion
-// Time Complexity O()
-// Space Complexity O()
+// Time Complexity O(n)
+// Space Complexity O(n)
 
 var recursiveSteps = function (n, row = 0, step = '') {
 	if (n === row) {
