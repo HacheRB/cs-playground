@@ -11,41 +11,60 @@ Matches the human mental model olf sorting, it's a educational algorithm as othe
 // Space Complexity O(1)
 
 function bubbleSort(nums) {
-  let swapped = true
-
-  while (swapped) {
-    swapped = false
-    for (let i = 1; i < nums.length; i++) {
-      if (nums[i] < nums[i - 1]) {
-        let temp = nums[i]
-        nums[i] = nums[i - 1]
-        nums[i - 1] = temp
-        swapped = true
-      }
-    }
-  }
-  return nums
+	for (let i = 0; i < nums.length; i++) {
+		for (let j = 0; j < nums.length; j++) {
+			if (nums[j] > nums[j + 1]) {
+				let temp = nums[j]
+				nums[j] = nums[j + 1]
+				nums[j + 1] = temp
+			}
+		}
+	}
+	return nums
 }
 
-// Solution #2 - Do While Loop
+// Optimized Bubble sort - Include swapped variable, if false at end of iteration, list is ordered.
+
+// Solution #2 - While Loop
 // Time Complexity O(n^2)
 // Space Complexity O(1)
 
 function bubbleSort2(nums) {
-  let swapped = false
+	let swapped = true
 
-  do {
-    swapped = false
-    for (let i = 0; i < nums.length; i++) {
-      if (nums[i] > nums[i + 1]) {
-        let temp = nums[i]
-        nums[i] = nums[i + 1]
-        nums[i + 1] = temp
-        swapped = true
-      }
-    }
-  } while (swapped)
-  return nums
+	while (swapped) {
+		swapped = false
+		for (let i = 1; i < nums.length; i++) {
+			if (nums[i] < nums[i - 1]) {
+				let temp = nums[i]
+				nums[i] = nums[i - 1]
+				nums[i - 1] = temp
+				swapped = true
+			}
+		}
+	}
+	return nums
+}
+
+// Solution #3 - Do While Loop
+// Time Complexity O(n^2)
+// Space Complexity O(1)
+
+function bubbleSort3(nums) {
+	let swapped = false
+
+	do {
+		swapped = false
+		for (let i = 0; i < nums.length; i++) {
+			if (nums[i] > nums[i + 1]) {
+				let temp = nums[i]
+				nums[i] = nums[i + 1]
+				nums[i + 1] = temp
+				swapped = true
+			}
+		}
+	} while (swapped)
+	return nums
 }
 
 const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1]
@@ -64,4 +83,13 @@ const t2 = performance.now()
 console.log(bubbleSort2(nums2))
 const t3 = performance.now()
 console.log(`Took ${t3 - t2} milliseconds.`)
+console.log('--------------------------------------')
+
+const nums3 = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1]
+
+console.log('Solution #2')
+const t4 = performance.now()
+console.log(bubbleSort3(nums2))
+const t5 = performance.now()
+console.log(`Took ${t5 - t4} milliseconds.`)
 console.log('--------------------------------------')
