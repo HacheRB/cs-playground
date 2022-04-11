@@ -1,7 +1,7 @@
 /* Insertion Sort
 https://en.wikipedia.org/wiki/Insertion_sort
 
-Simple implementation, efficient for small data sets, more efficient than other quadratic algorithms such as Selectionr or Bubble Sort. Insertion is good for when you have mostly sorted lists over others like quicksort or mergesort which have better average time complexity but worst best case time complexity.
+Simple implementation, efficient for small data sets, more efficient than other quadratic algorithms such as Selection Sort or Bubble Sort. Insertion is good for when you have mostly sorted lists over others like quicksort or mergesort which have better average time complexity but worst best case time complexity.
 
 Insertion sort iterates, consuming one input element each repetition, and grows a sorted output list. At each iteration, insertion sort removes one element from the input data, finds the location it belongs within the sorted list, and inserts it there. It repeats until no input elements remain. */
 
@@ -10,16 +10,16 @@ Insertion sort iterates, consuming one input element each repetition, and grows 
 // Space Complexity O(1)
 
 function insertionSort(nums) {
-  for (let i = 1; i < nums.length; i++) {
-    let numberToInsert = nums[i]
-    let j
+	for (let i = 1; i < nums.length; i++) {
+		let numberToInsert = nums[i]
+		let j
 
-    for (j = i - 1; j >= 0 && numberToInsert < nums[j]; j--) {
-      nums[j + 1] = nums[j]
-    }
-    nums[j + 1] = numberToInsert
-  }
-  return nums
+		for (j = i - 1; j >= 0 && numberToInsert < nums[j]; j--) {
+			nums[j + 1] = nums[j]
+		}
+		nums[j + 1] = numberToInsert
+	}
+	return nums
 }
 
 // Solution #2 - While Loop
@@ -27,17 +27,17 @@ function insertionSort(nums) {
 // Space Complexity O(1)
 
 function insertionSort2(nums) {
-  for (let i = 1; i < nums.length; i++) {
-    let numberToInsert = nums[i]
-    let j = i - 1
+	for (let i = 1; i < nums.length; i++) {
+		let numberToInsert = nums[i]
+		let j = i - 1
 
-    while (j >= 0 && numberToInsert < nums[j]) {
-      nums[j + 1] = nums[j]
-      j--
-    }
-    nums[j + 1] = numberToInsert
-  }
-  return nums
+		while (j >= 0 && numberToInsert < nums[j]) {
+			nums[j + 1] = nums[j]
+			j--
+		}
+		nums[j + 1] = numberToInsert
+	}
+	return nums
 }
 
 const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1]
