@@ -5,19 +5,17 @@ An example would be sorting a really big array. We would break it into two small
 
 A typical recursion problem would be the fibonacci sequence.
 
-Always set your base case first, so that your recursive function has a stop condition.
+Always set your base case first, so that your recursive function has a stop condition and doesn't go into an infinite loop. */
 
-*/
-
-// Fibonnaci Sequence
+// Fibonacci Sequence
 // Time Complexity O(2^n)
 // Space Complexity O(n)
 
 var fibonacci = function (n) {
-  if (n === 1 || n === 2) return 1
-  if (n === 0) return 0
+	if (n === 1 || n === 2) return 1
+	if (n === 0) return 0
 
-  return fibonacci(n - 1) + fibonacci(n - 2)
+	return fibonacci(n - 1) + fibonacci(n - 2)
 }
 
 // Iterated Fibonacci
@@ -25,11 +23,11 @@ var fibonacci = function (n) {
 // Space Complexity O(1)
 
 var iteratedFibonacci = function (n) {
-  const sequence = [0, 1]
-  for (let i = 2; i < n + 1; i++) {
-    sequence.push(sequence[i - 2] + sequence[i - 1])
-  }
-  return sequence[n]
+	const sequence = [0, 1]
+	for (let i = 2; i < n + 1; i++) {
+		sequence.push(sequence[i - 2] + sequence[i - 1])
+	}
+	return sequence[n]
 }
 
 // Memoized Fibonacci
@@ -37,31 +35,31 @@ var iteratedFibonacci = function (n) {
 // Space Complexity O(1)
 
 var memoizedFibonacci = function (n, memoized = [0, 1, 1]) {
-  if (memoized[n]) {
-    return memoized[n]
-  }
-  memoized[n] =
-    memoizedFibonacci(n - 1, memoized) + memoizedFibonacci(n - 2, memoized)
-  return memoized[n]
+	if (memoized[n]) {
+		return memoized[n]
+	}
+	memoized[n] =
+		memoizedFibonacci(n - 1, memoized) + memoizedFibonacci(n - 2, memoized)
+	return memoized[n]
 }
 
 let n = 32
 
-console.log('Fibonnaci')
+console.log('Fibonacci')
 const t0 = performance.now()
 console.log(fibonacci(n))
 const t1 = performance.now()
 console.log(`Took ${t1 - t0} milliseconds.`)
 console.log('--------------------------------------')
 
-console.log('Iterated Fibonnaci')
+console.log('Iterated Fibonacci')
 const t2 = performance.now()
 console.log(iteratedFibonacci(n))
 const t3 = performance.now()
 console.log(`Took ${t3 - t2} milliseconds.`)
 console.log('--------------------------------------')
 
-console.log('Memoized Fibonnaci')
+console.log('Memoized Fibonacci')
 const t4 = performance.now()
 console.log(memoizedFibonacci(n))
 const t5 = performance.now()
@@ -73,15 +71,15 @@ console.log('--------------------------------------')
 // Space Complexity O(n) probably
 
 var nestedAddition = function (nums) {
-  let sum = 0
-  for (let i = 0; i < nums.length; i++) {
-    if (typeof nums[i] === 'number') {
-      sum += nums[i]
-    } else {
-      sum += nestedAddition(nums[i])
-    }
-  }
-  return sum
+	let sum = 0
+	for (let i = 0; i < nums.length; i++) {
+		if (typeof nums[i] === 'number') {
+			sum += nums[i]
+		} else {
+			sum += nestedAddition(nums[i])
+		}
+	}
+	return sum
 }
 
 let nums = [1, 2, 3, 4, 5, [6, 7, 8], 9, [[10, 11], 13, [14]]]
@@ -98,8 +96,8 @@ console.log('--------------------------------------')
 // Space Complexity O(n) probably
 
 var factorial = function (m) {
-  if (m <= 1) return 1
-  return m * factorial(m - 1)
+	if (m <= 1) return 1
+	return m * factorial(m - 1)
 }
 
 let m = 8
