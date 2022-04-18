@@ -32,8 +32,8 @@ var solution2 = function (nums, target) {
 	return false
 }
 
-// Solution #2 - Two Pointers - If you only need true/false instead of index
-// Time Complexity O(n)
+// Solution #3 - Two Pointers - If you only need true/false instead of index, Space complexity would be o(1) if sorted in place
+// Time Complexity O(nlogn)
 // Space Complexity O(n)
 
 var solution3 = function (nums, target) {
