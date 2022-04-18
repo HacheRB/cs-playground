@@ -43,7 +43,7 @@ function bubbleSort2(nums) {
 // Space Complexity O(1)
 
 function bubbleSort3(nums) {
-	var swaps
+	let swaps
 	for (var i = nums.length; i > 0; i--) {
 		swaps = false
 		for (var j = 0; j < i - 1; j++) {
