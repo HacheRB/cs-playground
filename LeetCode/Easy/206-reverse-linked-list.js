@@ -16,13 +16,18 @@
  * @return {ListNode}
  */
 var reverseList = function (head) {
-	let prev = null
+	let currentNode = head
+	let nextNode = null
+	let previousNode = null
 
-	while (head) {
-		const temp = head.next
-		head.next = prev
-		prev = head
-		head = temp
+	while (currentNode) {
+		//Save next node
+		nextNode = currentNode.next
+		//reverse the nodes
+		currentNode.next = previousNode
+		//Move previous and current forward.
+		previousNode = currentNode
+		currentNode = nextNode
 	}
-	return prev
+	return previousNode
 }
