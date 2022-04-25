@@ -108,3 +108,47 @@ console.log(factorial(m))
 const t9 = performance.now()
 console.log(`Took ${t9 - t8} milliseconds.`)
 console.log('--------------------------------------')
+
+// String Reversal
+// Time Complexity O()
+// Space Complexity O(n) probably
+
+var reverseString = function (str) {
+	if (str === '') return ''
+
+	return reverseString(str.substring(1)) + str.charAt(0)
+}
+
+let str = 'Hello'
+
+console.log('String Reversal')
+const t10 = performance.now()
+console.log(reverseString(str))
+const t11 = performance.now()
+console.log(`Took ${t11 - t10} milliseconds.`)
+console.log('--------------------------------------')
+
+// Palindrome checker
+// Time Complexity O()
+// Space Complexity O(n) probably
+
+var isPalindrome = function (str) {
+	if (str.length <= 1) return true
+
+	if (
+		str.charAt(0).toLowerCase() === str.charAt(str.length - 1).toLowerCase()
+	) {
+		return isPalindrome(str.substring(1, str.length - 1))
+	}
+
+	return false
+}
+
+let str2 = 'Racecar'
+
+console.log('Palindrome checker')
+const t12 = performance.now()
+console.log(isPalindrome(str2))
+const t13 = performance.now()
+console.log(`Took ${t11 - t10} milliseconds.`)
+console.log('--------------------------------------')
