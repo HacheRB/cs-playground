@@ -152,3 +152,31 @@ console.log(isPalindrome(str2))
 const t13 = performance.now()
 console.log(`Took ${t11 - t10} milliseconds.`)
 console.log('--------------------------------------')
+
+// Decimal to Binary
+// Time Complexity O()
+// Space Complexity O(n) probably
+
+var decimalToBinary = function (num) {
+	if (num >= 1) {
+		// If num is not divisible by 2 then recursively return proceeding binary of the num minus 1, 1 is added for the leftover 1 num
+		if (num % 2) {
+			return decimalToBinary((num - 1) / 2) + 1
+		} else {
+			// Recursively return proceeding binary digits
+			return decimalToBinary(num / 2) + 0
+		}
+	} else {
+		// Exit condition
+		return ''
+	}
+}
+
+let num = 2
+
+console.log('Decimal to Binary')
+const t14 = performance.now()
+console.log(decimalToBinary(num))
+const t15 = performance.now()
+console.log(`Took ${t15 - t14} milliseconds.`)
+console.log('--------------------------------------')
