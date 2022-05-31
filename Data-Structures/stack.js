@@ -1,4 +1,6 @@
-/* Basic Implementation of a Stack. */
+/* Basic Implementation of a Stack.
+
+To do: Implement with a linked list. */
 
 class Stack {
 	constructor() {
