@@ -40,6 +40,23 @@ function insertionSort2(nums) {
 	return nums
 }
 
+// Solution #3 - While Loop
+// Time Complexity O(n^2)
+// Space Complexity O(1)
+
+function insertionSort3(nums) {
+	for (var i = 0; i < nums.length; i++) {
+		let current = i
+		while (current > 0 && nums[current] < nums[current - 1]) {
+			const temp = nums[current]
+			nums[current] = nums[current - 1]
+			nums[current - 1] = temp
+			current--
+		}
+	}
+	return nums
+}
+
 const nums = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1]
 
 console.log('Solution #1')
@@ -56,4 +73,13 @@ const t2 = performance.now()
 console.log(insertionSort2(nums2))
 const t3 = performance.now()
 console.log(`Took ${t3 - t2} milliseconds.`)
+console.log('--------------------------------------')
+
+const nums3 = [10, 5, 3, 8, 2, 6, 4, 7, 9, 1]
+
+console.log('Solution #3')
+const t4 = performance.now()
+console.log(insertionSort3(nums3))
+const t5 = performance.now()
+console.log(`Took ${t5 - t4} milliseconds.`)
 console.log('--------------------------------------')
